@@ -19,6 +19,16 @@ body  {
   margin-top: 0px;
 }
 
-.col-md-4 {
+.col-md-3 {
   border-left: 1px solid #5a544f;
+}
+
+.calendar-nav {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.calendar-nav li  {
+  display: inline;
+  margin-right: 1em;
 }
