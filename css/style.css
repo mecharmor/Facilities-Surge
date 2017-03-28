@@ -1,0 +1,25 @@
+body  {
+  padding-top: 70px; /*required for bootstrap fixed-to-top navbar*/*/
+  background-color: #fcfcfc;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+  background-color: #5a544f;
+  padding-bottom: 1rem;
+}
+
+#app-name {
+  color: #fdfdfd;
+  font-size: 3rem;
+  font-family: 'Pacifico', cursive;
+}
+
+#primary-container  {
+  margin-top: 0px;
+}
+
+.col-md-8,
+.col-md-4 {
+  /*border-top: 1px solid #ccc;*/
+}
