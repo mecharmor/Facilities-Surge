@@ -38,7 +38,7 @@ $(document).ready(function()  {
   function makeApiCall() {
     gapi.client.load('calendar', 'v3', function() {
       var request = gapi.client.calendar.events.list({
-        'calendarId': 'primary'
+        'calendarId': 'Voyager Calendar'
     });
 
     request.execute(function(resp) {
