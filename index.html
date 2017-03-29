@@ -12,6 +12,10 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       <!--Google Fonts-->
       <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto" rel="stylesheet">
+      <!--Google Mail API => messenger.js-->
+      <script type="text/javascript" src="js/messenger.js"></script>
+
+      </script>
       <!--style.css-->
       <link rel="stylesheet" href="css/style.css">
       <!--app.js & sidebar.js-->
@@ -59,10 +63,18 @@
           <h1>Sidebar</h1>
           <div class="container" id="sidebar-container">
             <p>howdy</p>
+            <button type="button" class="btn btn-primary" id="authorize-button">Authorize</button>
+            <button type="button" class="btn btn-danger" id="signout-button">Sign Out</button>
           </div>
         </div>
       <!--End Side View-------------------------------------------------------->
       </div>
     </div>
+
+    <!--Messenger Script-->
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
   </body>
 </html>
