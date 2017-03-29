@@ -1,0 +1,19 @@
+{
+  "name": "voyager",
+  "version": "1.0.0",
+  "description": "transportation management system for college of the sequoias.",
+  "main": "js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mecharmor/Facilities-Surge.git"
+  },
+  "author": "Jordan Bellah, Cory Lewis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mecharmor/Facilities-Surge/issues"
+  },
+  "homepage": "https://github.com/mecharmor/Facilities-Surge#readme"
+}
