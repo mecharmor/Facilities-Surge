@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/mecharmor/Facilities-Surge/issues"
   },
-  "homepage": "https://github.com/mecharmor/Facilities-Surge#readme"
+  "homepage": "https://github.com/mecharmor/Facilities-Surge#readme",
+  "dependencies": {
+    "google-auth-library": "^0.10.0",
+    "googleapis": "^18.0.0"
+  }
 }
