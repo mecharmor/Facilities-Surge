@@ -32,3 +32,11 @@ body  {
   display: inline;
   margin-right: 1em;
 }
+.tile-display{
+  padding-bottom: 1em;
+  padding-top: 1em;
+  text-align: center;
+}
+.tile-rows{
+    border-left: 3px solid #5a544f;
+}
