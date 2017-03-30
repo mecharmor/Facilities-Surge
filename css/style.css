@@ -36,3 +36,7 @@ body  {
 #sidebar-container  {
   padding-left: 0px;
 }
+
+#sidebar-date {
+  margin-bottom: 0px;
+}
