@@ -20,7 +20,13 @@ body  {
 }
 
 .col-md-3 {
-  border-left: 1px solid #5a544f;
+  /*border-left: 1px solid #5a544f;*/
+  position: fixed;
+  right:0;
+  height:100vh;
+  overflow-y: scroll;
+  box-shadow: -3px -2px 5px #808080;
+  padding-bottom: 5em;
 }
 
 .calendar-nav {
