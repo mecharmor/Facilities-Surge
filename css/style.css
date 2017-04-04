@@ -6,12 +6,12 @@ body  {
 
 .navbar {
   background-color: #5a544f;
-  padding-bottom: 1rem;
+  /*padding-bottom: 1rem;*/
 }
 
 #app-name {
   color: #fdfdfd;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: 'Pacifico', cursive;
 }
 
