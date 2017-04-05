@@ -29,31 +29,31 @@ $(document).ready(function(){
   // ========================= Form Validation ================================>
 
     $("#Modal_Name_Input").keyup(function(){
-      //If this Name Input contains ANY letters then set to true
-      //Else set to false
-      var GoodInput = ContainsANYLetters($("#Modal_Name_Input").val());
-      //If letters are entered
-      if (GoodInput) {
+
+      //If naming scheme is correct... then do this..
+      if (validate_Naming_Scheme("Modal_Name_Input")) {
+        //Change from red x to green check
         $("#Modal_Name_Validation").removeClass( "glyphicon-remove-circle" ).addClass( "glyphicon-ok-circle" );
       }else {
+        //Change from green check to red x
         $("#Modal_Name_Validation").removeClass( "glyphicon-ok-circle" ).addClass( "glyphicon-remove-circle" );
       }
 
     });
 
   //=====> Validation Functions <==================\\
-
-  function ContainsANYLetters(temp){
-
-    //Check for any Letters
-    if (/[a-zA-Z]/.test(temp)) {
-      return true;
-    }
-      //No Letters Found
-      return false;
-
-
-  }
+  //Pass in element Id to make function work properly
+  function validate_Naming_Scheme(temp){
+  //  var re = /^[A-Za-z]+$/;  <== This ONLY Allows Letters
+  //Used Regular Expressions for Validation
+    var re = /^[a-z ,.'-]+$/i;  //<== This allows for a-z and some special characters
+    if(re.test(document.getElementById(temp).value)){
+       return true;
+       }
+    else{
+       return false;
+       }
+}// End validate_Naming_Scheme
 
   //=====> End Validation Functions <===============\\
 
