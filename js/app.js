@@ -1,24 +1,10 @@
 $(document).ready(function(){
 
+//Global Variables\\
+
+//End Global Variables\\
 
 
 
 
-
-
-
-
-
-
-
-  //Start Timer
-  var myVar = setInterval(function(){ myTimer() }, 1000);
-  //Update Time
-  function myTimer() {
-      var d = new Date();
-      var t = d.toLocaleTimeString();
-      document.getElementById("time").innerHTML = t;
-  }
-
-
-});
+});//End document.ready

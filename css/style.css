@@ -19,24 +19,18 @@ body  {
   margin-top: 0px;
 }
 
-.col-md-3 {
-  border-left: 1px solid #5a544f;
+/*Modal Inputs*/
+.input-group{
+
+padding-bottom: 1em;
+
 }
 
-.calendar-nav {
-  list-style: none;
-  padding-left: 0px;
+/*Always make the remove cirlce RED*/
+.glyphicon-remove-circle{
+  color:#ff1a1a;
 }
-
-.calendar-nav li  {
-  display: inline;
-  margin-right: 1em;
-}
-.tile-display{
-  padding-bottom: 1em;
-  padding-top: 1em;
-  text-align: center;
-}
-.tile-rows{
-    border-left: 3px solid #5a544f;
+/*Always make the ok circle GREEN */
+.glyphicon-ok-circle{
+  color:#2eb82e;
 }

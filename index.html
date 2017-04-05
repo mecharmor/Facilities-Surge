@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Main</title>
-    <!--Load Modules-->
+    <title>Voyager | Transp..</title>
+      <!--Load Modules-->
       <!--jQuery-->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <!--Bootstrap CSS-->
@@ -16,6 +16,9 @@
       <link rel="stylesheet" href="css/style.css">
       <!--app.js-->
       <script type="text/javascript" src="js/app.js"></script>
+
+      <!-- Vehicles .js ONLY FOR THIS PAGE -->
+      <script type="text/javascript" src="js\Vehicles.js"></script>
   </head>
   <body>
     <!--Navbar----------------------------------------------------------------->
@@ -26,37 +29,102 @@
       </div>
     </nav>
 
+
     <!--End Navbar------------------------------------------------------------->
     <div class="container" id="primary-container">
-      <div class="row">
 
-      <!--Main View------------------------------------------------------------>
-        <div class="col-md-9">
-          <h1>Calendar</h1>
+      <!--=========================== Main View =============================-->
 
-          <!-- <ul class="calendar-nav">
-            <li><a href="#">Jan</a></li>
-            <li><a href="#">Feb</a></li>
-            <li><a href="#">Mar</a></li>
-            <li><a href="#">Apr</a></li>
-            <li><a href="#">May</a></li>
-            <li><a href="#">Jun</a></li>
-            <li><a href="#">Jul</a></li>
-            <li><a href="#">Aug</a></li>
-            <li><a href="#">Sep</a></li>
-            <li><a href="#">Oct</a></li>
-            <li><a href="#">Nov</a></li>
-            <li><a href="#">Dec</a></li>
-          </ul> -->
+      <!--vehicle Table-->
+  <div class="table-body">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <!--Add/Remove vehicle Buttons-->
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-success" id="add-vehicle" data-toggle="modal" data-target="#add-vehicle-modal" data-toggle="tooltip" title="Add Vehicle"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+          <button type="button" class="btn btn-danger" id="delete-vehicle" data-toggle="tooltip" title="Delete Vehicle"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
         </div>
-      <!--End Main View-------------------------------------------------------->
-
-      <!--Side View------------------------------------------------------------>
-        <div class="col-md-3">
-          <h1 id="time">Loading...</h1>
-        </div>
-      <!--End Side View-------------------------------------------------------->
       </div>
+      <!--Table-->
+      <table class="table" id="vehicle-table">
+        <thead id="vehicle">
+           <tr id="table-header-row">
+             <th>Date</th>
+             <th>Time</th>
+             <th>Name</th>
+             <th>Dept</th>
+             <th>Vehicle #</th>
+             <th>Key Letter</th>
+             <th>Destination</th>
+           </tr>
+        </thead>
+      </table>
+      <!--End Table-->
+      </div>
+    </div>
+    <!--End Transportation Table Body-->
+
+
+    <!--Begin Modal-->
+    <div class="modal fade" id="add-vehicle-modal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Checkout Vehicle</h4>
+          </div>
+          <!--Body of Modal-->
+          <div class="modal-body">
+            <!--New vehicle Form-->
+            <form id = "new-vehicle-form">
+              <div class="input-group">
+                <span class="input-group-addon" id="Modal_Date">Date:</span>
+                <input id="Modal_Date_Input" type="text" class="form-control" aria-describedby="Modal_Date" disabled>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon" id="Modal_Time">Time:</span>
+                <input id="Modal_Time_Input"type="text" class="form-control" aria-describedby="Modal_Time" disabled>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon" id="Modal_Name">Name:</span>
+                <input id="Modal_Name_Input" type="text" class="form-control" placeholder="John Doe" aria-describedby="Modal_Name">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-remove-circle" id="Modal_Name_Validation"></span></span>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon" id="Modal_Dept">Department:</span>
+                <input id="Modal_Dept_Input"type="text" class="form-control" placeholder="Facilities, EOPS, Admin..." aria-describedby="Modal_Dept">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-remove-circle" id="Modal_Dept_Validation"></span></span>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon" id="Modal_Vehicle">Vehicle #:</span>
+                <input id="Modal_Vehicle_Input"type="text" class="form-control" placeholder="32,33,14,15,16,17..." aria-describedby="Modal_Vehicle">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-remove-circle" id="Modal_Vehicle_Validation"></span></span>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon" id="Modal_Letter">Key Letter:</span>
+                <input id="Modal_Letter_Input"type="text" class="form-control" placeholder="A,B,C,D..." aria-describedby="Modal_letter">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-remove-circle" id="Modal_Letter_Validation"></span></span>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon" id="Modal_Destination">Destination:</span>
+                <input id="Modal_Destination_Input"type="text" class="form-control" placeholder="Visalia, Hanford, SLO..." aria-describedby="Modal_Destination">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-remove-circle" id="Modal_Destination_Validation"></span></span>
+              </div>
+            </form>
+            <!--End New vehicle Form-->
+          </div>
+          <!--Modal Submit/Cancel-->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" id="Modal_Submit">Submit</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal" id="Modal_Cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal Ends Here -- >
+
+
+      <!--======================== End Main View ============================-->
+
     </div>
   </body>
 </html>
