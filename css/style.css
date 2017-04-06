@@ -1,10 +1,10 @@
 body  {
   padding-top: 70px; /*required for bootstrap fixed-to-top navbar*/*/
   background-color: #fcfcfc;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Code Pro', sans-serif;
 }
 
-.navbar {
+.navbar{
   background-color: #5a544f;
   /*padding-bottom: 1rem;*/
 }

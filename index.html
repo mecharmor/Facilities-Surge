@@ -11,7 +11,7 @@
       <!--Bootstrap JS-->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       <!--Google Fonts-->
-      <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto|Source+Code+Pro" rel="stylesheet">
       <!--style.css-->
       <link rel="stylesheet" href="css/style.css">
       <!--app.js-->
@@ -23,12 +23,16 @@
   <body>
     <!--Navbar----------------------------------------------------------------->
 
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
           <a class="navbar-brand" href="#" id="app-name" >Voyager</a>
+          <ul class="nav navbar-nav">
+          <li><a href="index.html">Vehicle</a></li>
+          <li><a href="gasCard.html">Gas Card</a></li>
+          <li><a href="maintenance.html">Maintenance Truck</a></li>
+          </ul>
       </div>
     </nav>
-
 
     <!--End Navbar------------------------------------------------------------->
     <div class="container" id="primary-container">
@@ -96,12 +100,12 @@
               </div>
               <div class="input-group">
                 <span class="input-group-addon" id="Modal_Vehicle">Vehicle #:</span>
-                <input id="Modal_Vehicle_Input"type="text" class="form-control" placeholder="32,33,14,15,16,17..." aria-describedby="Modal_Vehicle">
+                <input id="Modal_Vehicle_Input"type="text" class="form-control" placeholder="32,33,14,15,16,17..." aria-describedby="Modal_Vehicle" maxlength="2">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-remove-circle" id="Modal_Vehicle_Validation"></span></span>
               </div>
               <div class="input-group">
                 <span class="input-group-addon" id="Modal_Letter">Key Letter:</span>
-                <input id="Modal_Letter_Input"type="text" class="form-control" placeholder="A,B,C,D..." aria-describedby="Modal_letter">
+                <input id="Modal_Letter_Input" type="text" class="form-control" placeholder="A,B,C,D..." aria-describedby="Modal_letter" maxlength="1">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-remove-circle" id="Modal_Letter_Validation"></span></span>
               </div>
               <div class="input-group">
