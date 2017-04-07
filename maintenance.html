@@ -2,11 +2,119 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Voyager | Maint..</title>
+    <title>Voyager | Gas Card</title>
+      <!--Load Modules-->
+      <!--jQuery-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <!--Bootstrap CSS-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <!--Bootstrap JS-->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <!--Google Fonts-->
+      <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto|Source+Code+Pro" rel="stylesheet">
+      <!--style.css-->
+      <link rel="stylesheet" href="css/style.css">
+      <!--app.js-->
+      <script type="text/javascript" src="js/app.js"></script>
+
+      <!-- maintTrucks .js ONLY FOR THIS PAGE -->
+      <script type="text/javascript" src="js\maintenance.js"></script>
   </head>
   <body>
+    <!--Navbar----------------------------------------------------------------->
 
-    <p>This is the Maintenance Truck Page</p>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+          <a class="navbar-brand" href="#" id="app-name" >Voyager</a>
+          <ul class="nav navbar-nav">
+          <li><a href="index.html">Vehicle</a></li>
+          <li><a href="gasCard.html">Gas Card</a></li>
+          <li class="active"><a href="maintenance.html">Maintenance Truck</a></li>
+          </ul>
+      </div>
+    </nav>
 
+    <!--End Navbar------------------------------------------------------------->
+    <div class="container" id="primary-container">
+
+      <!--=========================== Main View =============================-->
+
+      <!--maintTruck Table-->
+  <div class="table-body">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <!--Add/Remove maintTruck Buttons-->
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-success" id="add-maintTruck" data-toggle="modal" data-target="#add-maintTruck-modal" data-toggle="tooltip" title="Add maintTruck"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+          <button type="button" class="btn btn-danger" id="delete-maintTruck" data-toggle="tooltip" title="Delete Gas Card"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
+        </div>
+      </div>
+      <!--Table-->
+      <table class="table" id="maintTruck-table">
+        <thead id="maintTruck">
+           <tr id="table-header-row">
+             <th>Date</th>
+             <th>Time</th>
+             <th>Name</th>
+             <th>Truck #</th>
+             <th>Destination</th>
+           </tr>
+        </thead>
+      </table>
+      <!--End Table-->
+      </div>
+    </div>
+    <!--End Transportation Table Body-->
+
+    <!--Begin Modal-->
+    <div class="modal fade" id="add-maintTruck-modal" role="dialog" data-backdrop="static">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Checkout Gas Card</h4>
+          </div>
+          <!--Body of Modal-->
+          <div class="modal-body">
+            <!--New maintTruck Form-->
+            <form id = "new-maintTruck-form">
+              <div class="input-group">
+                <span class="input-group-addon" id="Modal_Date">Date:</span>
+                <input id="Modal_Date_Input" type="text" class="form-control" aria-describedby="Modal_Date" disabled>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon" id="Modal_Time">Time:</span>
+                <input id="Modal_Time_Input"type="text" class="form-control" aria-describedby="Modal_Time" disabled>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon" id="Modal_Name">Name:</span>
+                <input id="Modal_Name_Input" type="text" class="form-control" placeholder="John Doe" aria-describedby="Modal_Name">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-remove-circle" id="Modal_Name_Validation"></span></span>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon" id="Modal_maintTruck">Truck #:</span>
+                <input id="Modal_maintTruck_Input" type="text" class="form-control" placeholder="11,22,31..." aria-describedby="Modal_maintTruck" maxlength="2">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-remove-circle" id="Modal_maintTruck_Validation"></span></span>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon" id="Modal_Destination">Destination:</span>
+                <input id="Modal_Destination_Input"type="text" class="form-control" placeholder="Visalia, Hanford, SLO..." aria-describedby="Modal_Destination">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-remove-circle" id="Modal_Destination_Validation"></span></span>
+              </div>
+            </form>
+            <!--End New maintTruck Form-->
+          </div>
+          <!--Modal Submit/Cancel-->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" id="Modal_Submit">Submit</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal" id="Modal_Cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal Ends Here -- >
+
+      <!--======================== End Main View ============================-->
+
+    </div>
   </body>
 </html>
