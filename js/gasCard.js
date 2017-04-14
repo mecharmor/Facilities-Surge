@@ -63,7 +63,7 @@
           }
       });
 
-      $("#Modal_Destination_Input").keydown(function(){
+      $("#Modal_Destination_Input").on("input",function(){
 
         //If naming scheme is correct... then do this..
         if (validate_Naming_Scheme("Modal_Destination_Input")) {
