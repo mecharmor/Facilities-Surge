@@ -28,7 +28,7 @@ $(document).ready(function(){
 
   // ========================= Form Validation ================================>
 
-    $("#Modal_Name_Input").keyup(function(){
+    $("#Modal_Name_Input").on("input",function(){
         //Modal Name Validation
         if (validate_Naming_Scheme("Modal_Name_Input")) {
           //Change from red x to green check
@@ -40,7 +40,7 @@ $(document).ready(function(){
     });
 
     //Modal Department Validation
-    $("#Modal_Dept_Input").keyup(function(){
+    $("#Modal_Dept_Input").on("input",function(){
         //If naming scheme is correct... then do this..
         if (validate_Naming_Scheme("Modal_Dept_Input")) {
           //Change from red x to green check
@@ -83,7 +83,7 @@ $(document).ready(function(){
         }
     }));
 
-    $("#Modal_Destination_Input").keydown(function(){
+    $("#Modal_Destination_Input").on("input",function(){
 
       //If naming scheme is correct... then do this..
       if (validate_Naming_Scheme("Modal_Destination_Input")) {
